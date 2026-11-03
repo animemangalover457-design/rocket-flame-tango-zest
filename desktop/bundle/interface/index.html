@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keel</title>
+    <link rel="icon" href="/icon.ico" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top">
+        <button class="mark" id="open-rail" type="button">Keel</button>
+        <span class="quiet">Model desk</span>
+        <span class="spacer"></span>
+        <span class="chip" id="chip">No model yet</span>
+        <button class="text-btn" id="open-drawer" type="button">Settings</button>
+      </header>
+      <div class="desk">
+        <aside class="rail shut" id="rail">
+          <div class="rail-head">
+            <span class="kicker">Threads</span>
+            <button class="text-btn" id="new-thread" type="button">New</button>
+          </div>
+          <div class="list" id="threads"></div>
+        </aside>
+        <section class="page-wrap">
+          <div class="title-row">
+            <input id="title" aria-label="Thread title" />
+          </div>
+          <div class="page" id="page"></div>
+          <div class="composer">
+            <form id="form">
+              <textarea id="draft" rows="1" aria-label="Message" placeholder="Write to the desk"></textarea>
+              <button class="send" id="send" type="submit" aria-label="Send">↑</button>
+            </form>
+            <p class="hint" id="hint">Keys live in settings/keys.json on this PC. They leave the machine only when you send.</p>
+          </div>
+        </section>
+        <aside class="drawer shut" id="drawer">
+          <div class="tabs" id="tabs">
+            <button type="button" data-tab="model">Model</button>
+            <button type="button" data-tab="voice">Voice</button>
+            <button type="button" data-tab="key">Key</button>
+            <button type="button" data-tab="files">Files</button>
+            <button type="button" data-tab="offline">Offline</button>
+          </div>
+          <div class="sheet" id="sheet"></div>
+        </aside>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

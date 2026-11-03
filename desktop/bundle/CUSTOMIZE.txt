@@ -1,0 +1,48 @@
+What each child file is for
+==========================
+
+icon.ico
+  The icon in the window corner and taskbar while Keel is open.
+  Draw or export a .ico, replace this file, reopen Keel.
+  The icon baked into Keel.exe in Explorer is the packaged mark.
+  The window itself always loads icon.ico from this folder.
+
+interface/theme.css
+  The only file you need for a new skin. Change the colors under :root.
+  interface/app.css is the layout. Leave it alone unless you want to move panels.
+  interface/index.html is the structure.
+  interface/app.js is the logic: threads, keys, downloads, chat.
+
+api/providers.json
+  Add a provider by copying an object. kind is "openai", "anthropic", or "gemini".
+  baseUrl for openai-compatible APIs should end in /v1.
+  Set "local": true only for a server on this PC (127.0.0.1).
+
+settings/settings.json
+  providerId must match an id in providers.json.
+  model is the model name sent to that provider.
+  windowTitle is the text in the title bar (read when Keel opens).
+  offlinePort is where the local model listens. Default 17890.
+  modelFile is the .gguf filename inside models/.
+
+settings/keys.json
+  One key per provider id. Empty string means none.
+  This file is a secret. Do not email the folder after you paste keys.
+
+personality/active.txt
+  The system prompt. The Voice tab writes this file.
+  personality/presets/*.txt are the buttons. First line may be "# Name".
+
+models/catalog.json
+  runtimeFallback is the llama.cpp zip used if GitHub's API is quiet.
+  models[] are the download buttons. Add your own https URL and filename.
+
+chats/history.json
+  Your threads. Safe to delete; Keel will start a fresh one.
+
+runtime/
+  Created when you download the offline runner. llama.log is the local model's log.
+
+source/
+  Go source for Keel.exe. See source/BUILD.txt to compile it yourself.
+  You do not need Go to change the icon, theme, personality, or providers.

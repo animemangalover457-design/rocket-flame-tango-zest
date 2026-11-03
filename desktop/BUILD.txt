@@ -1,0 +1,15 @@
+Rebuild Keel.exe on a machine with Go installed:
+
+  cd source
+  go mod download
+  set GOOS=windows
+  set GOARCH=amd64
+  set CGO_ENABLED=0
+  go build -ldflags "-H windowsgui -s -w" -o ../Keel.exe ./cmd/keel
+
+On macOS or Linux, the same variables are:
+
+  GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags "-H windowsgui -s -w" -o ../Keel.exe ./cmd/keel
+
+Place the new Keel.exe next to the interface, api, settings, and personality folders.
+Do not rename those folders. Keel finds them beside the exe, not in the current directory.

@@ -1,0 +1,38 @@
+KEEL
+A desk for any AI model. Windows program.
+
+1. Unzip this whole folder. Do not run Keel.exe from inside the zip.
+2. Double-click Keel.exe.
+3. Windows may say the publisher is unknown, because this build is not signed.
+   Choose More info, then Run anyway.
+4. If a message says WebView2 is missing, install the free Microsoft Edge
+   WebView2 Runtime, then open Keel again. Windows 11 already has it.
+
+Keel.exe is a compiled Windows program (a real PE executable, machine code).
+It opens its own window. It does not open a browser tab.
+
+The other files are plain text on purpose, so you can change them:
+
+  icon.ico                  window icon
+  interface/theme.css       colors and fonts
+  interface/index.html      layout
+  interface/app.css         spacing and structure
+  interface/app.js          behavior
+  api/providers.json        model providers and endpoints
+  settings/settings.json    temperature, model, window title
+  settings/keys.json        your API keys (keep this private)
+  personality/active.txt    the voice used for every reply
+  personality/presets/      voice presets
+  models/catalog.json       offline models Keel is allowed to download
+  source/                   the Go source, if you want to rebuild the exe
+
+Edit a file in Notepad, save, and open Keel again.
+Keys and settings you change inside the window are written back to these files.
+
+OFFLINE
+Open Keel, choose Settings, then Offline.
+Download the offline runner (about 25 MB), then SmolLM2 (about 100 MB).
+Press Start offline model. Pick Offline model. Chat with no API key.
+The model file stays in the models folder.
+
+Your keys are only sent to the provider you chose, and only when you press Send.

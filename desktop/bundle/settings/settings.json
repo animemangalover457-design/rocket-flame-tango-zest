@@ -1,0 +1,11 @@
+{
+  "providerId": "openai",
+  "model": "gpt-4o-mini",
+  "customBaseUrl": "",
+  "temperature": 0.7,
+  "maxTokens": 1200,
+  "activePreset": "plain",
+  "windowTitle": "Keel",
+  "offlinePort": 17890,
+  "modelFile": ""
+}

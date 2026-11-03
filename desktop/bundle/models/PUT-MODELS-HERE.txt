@@ -1,0 +1,3 @@
+Downloaded .gguf files land in this folder.
+You can also drop your own .gguf here, set "modelFile" in settings/settings.json
+to the filename, choose the Offline model provider, and start it from the Offline tab.

@@ -1,0 +1,14 @@
+:root {
+  --ink: #14120f;
+  --ink-2: #1c1914;
+  --panel: #242019;
+  --line: #3a342c;
+  --bone: #f3eee6;
+  --bone-dim: #d9d0c3;
+  --mute: #9a9084;
+  --brass: #d7b07a;
+  --brass-2: #8c6d3f;
+  --sans: "Segoe UI", "Outfit", sans-serif;
+  --display: "Palatino Linotype", Palatino, "Times New Roman", serif;
+  --radius: 14px;
+}

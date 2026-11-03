@@ -1,0 +1,114 @@
+{
+  "providers": [
+    {
+      "id": "openai",
+      "label": "OpenAI",
+      "kind": "openai",
+      "baseUrl": "https://api.openai.com/v1",
+      "models": ["gpt-4o-mini", "gpt-4o", "gpt-4.1-mini"],
+      "keyHint": "sk-…",
+      "blurb": "Chat Completions. Type any model id if yours is not listed.",
+      "local": false
+    },
+    {
+      "id": "anthropic",
+      "label": "Anthropic",
+      "kind": "anthropic",
+      "baseUrl": "https://api.anthropic.com",
+      "models": ["claude-sonnet-4-5", "claude-3-5-haiku-latest"],
+      "keyHint": "sk-ant-…",
+      "blurb": "Messages API. The key stays in settings/keys.json.",
+      "local": false
+    },
+    {
+      "id": "gemini",
+      "label": "Google Gemini",
+      "kind": "gemini",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+      "models": ["gemini-2.5-flash", "gemini-2.5-pro"],
+      "keyHint": "AIza…",
+      "blurb": "A Google AI Studio key.",
+      "local": false
+    },
+    {
+      "id": "xai",
+      "label": "xAI",
+      "kind": "openai",
+      "baseUrl": "https://api.x.ai/v1",
+      "models": ["grok-4.5", "grok-4", "grok-3"],
+      "keyHint": "xai-…",
+      "blurb": "Your own xAI key.",
+      "local": false
+    },
+    {
+      "id": "groq",
+      "label": "Groq",
+      "kind": "openai",
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "models": ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"],
+      "keyHint": "gsk_…",
+      "blurb": "Fast OpenAI-compatible endpoint.",
+      "local": false
+    },
+    {
+      "id": "openrouter",
+      "label": "OpenRouter",
+      "kind": "openai",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "models": ["openai/gpt-4o-mini", "anthropic/claude-sonnet-4.5"],
+      "keyHint": "sk-or-…",
+      "blurb": "One key, many models. Use the provider/model id.",
+      "local": false
+    },
+    {
+      "id": "mistral",
+      "label": "Mistral",
+      "kind": "openai",
+      "baseUrl": "https://api.mistral.ai/v1",
+      "models": ["mistral-small-latest", "open-mistral-nemo"],
+      "keyHint": "",
+      "blurb": "Mistral’s OpenAI-compatible API.",
+      "local": false
+    },
+    {
+      "id": "deepseek",
+      "label": "DeepSeek",
+      "kind": "openai",
+      "baseUrl": "https://api.deepseek.com/v1",
+      "models": ["deepseek-chat", "deepseek-reasoner"],
+      "keyHint": "sk-…",
+      "blurb": "DeepSeek chat.",
+      "local": false
+    },
+    {
+      "id": "together",
+      "label": "Together",
+      "kind": "openai",
+      "baseUrl": "https://api.together.xyz/v1",
+      "models": ["meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"],
+      "keyHint": "",
+      "blurb": "Together AI. Paste the full model string.",
+      "local": false
+    },
+    {
+      "id": "custom",
+      "label": "Custom endpoint",
+      "kind": "openai",
+      "baseUrl": "https://example.com/v1",
+      "models": ["local"],
+      "keyHint": "optional",
+      "blurb": "Any public https OpenAI-compatible /v1 base. Put the real URL in settings, or edit this file.",
+      "local": false
+    },
+    {
+      "id": "offline",
+      "label": "Offline model",
+      "kind": "openai",
+      "baseUrl": "http://127.0.0.1:17890/v1",
+      "models": ["local"],
+      "keyHint": "",
+      "blurb": "A model downloaded onto this PC. No key.",
+      "local": true
+    }
+  ]
+}
